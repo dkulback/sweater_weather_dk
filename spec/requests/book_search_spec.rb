@@ -51,8 +51,8 @@ RSpec.describe 'book search api', type: :request do
       end
     end
     context 'when params are invalid' do
-      xit 'returns bad request status and error message' do
-        VCR.use_cassette('invalid_background') do
+      it 'returns bad request status and error message' do
+        VCR.use_cassette('invalid_location') do
           get api_v1_backgrounds_path, headers: headers, params: invalid_params
 
           expect(response).to have_http_status(400)
