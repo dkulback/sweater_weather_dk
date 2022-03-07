@@ -1,0 +1,411 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://openlibrary.org/search.json?fields=title,publisher,isbn&limit=5&q=denver,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.18.0 (Ubuntu)
+      Date:
+      - Mon, 07 Mar 2022 17:15:10 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - GET, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+      X-Ol-Stats:
+      - '"SR 1 0.176 TT 0 0.176"'
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "numFound": 41867,
+            "start": 0,
+            "numFoundExact": true,
+            "docs": [
+                {
+                    "title": "Denver, Co",
+                    "isbn": [
+                        "9780762507849",
+                        "0762507845"
+                    ],
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ]
+                },
+                {
+                    "title": "Photovoltaic safety, Denver, CO, 1988",
+                    "isbn": [
+                        "0883183668",
+                        "9780883183663"
+                    ],
+                    "publisher": [
+                        "American Institute of Physics"
+                    ]
+                },
+                {
+                    "title": "University of Denver Co 2007",
+                    "isbn": [
+                        "9781427401687",
+                        "1427401683"
+                    ],
+                    "publisher": [
+                        "College Prowler"
+                    ]
+                },
+                {
+                    "title": "Denver Co Deluxe Flip Map",
+                    "isbn": [
+                        "0762557362",
+                        "9780762557363"
+                    ],
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ]
+                },
+                {
+                    "title": "Insight Fleximap Denver, CO (Insight Fleximaps)",
+                    "isbn": [
+                        "9812582622",
+                        "9789812582621"
+                    ],
+                    "publisher": [
+                        "American Map Corporation"
+                    ]
+                }
+            ],
+            "num_found": 41867,
+            "q": "denver,co",
+            "offset": null
+        }
+  recorded_at: Mon, 07 Mar 2022 17:15:10 GMT
+- request:
+    method: get
+    uri: http://openlibrary.org/search.json?fields=title,publisher,isbn&limit=5&q=denver,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.18.0 (Ubuntu)
+      Date:
+      - Mon, 07 Mar 2022 17:15:11 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - GET, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+      X-Ol-Stats:
+      - '"SR 1 0.181 TT 0 0.182"'
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "numFound": 41867,
+            "start": 0,
+            "numFoundExact": true,
+            "docs": [
+                {
+                    "title": "Denver, Co",
+                    "isbn": [
+                        "9780762507849",
+                        "0762507845"
+                    ],
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ]
+                },
+                {
+                    "title": "Photovoltaic safety, Denver, CO, 1988",
+                    "isbn": [
+                        "0883183668",
+                        "9780883183663"
+                    ],
+                    "publisher": [
+                        "American Institute of Physics"
+                    ]
+                },
+                {
+                    "title": "University of Denver Co 2007",
+                    "isbn": [
+                        "9781427401687",
+                        "1427401683"
+                    ],
+                    "publisher": [
+                        "College Prowler"
+                    ]
+                },
+                {
+                    "title": "Denver Co Deluxe Flip Map",
+                    "isbn": [
+                        "0762557362",
+                        "9780762557363"
+                    ],
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ]
+                },
+                {
+                    "title": "Insight Fleximap Denver, CO (Insight Fleximaps)",
+                    "isbn": [
+                        "9812582622",
+                        "9789812582621"
+                    ],
+                    "publisher": [
+                        "American Map Corporation"
+                    ]
+                }
+            ],
+            "num_found": 41867,
+            "q": "denver,co",
+            "offset": null
+        }
+  recorded_at: Mon, 07 Mar 2022 17:15:11 GMT
+- request:
+    method: get
+    uri: http://openlibrary.org/search.json?fields=title,publisher,isbn&limit=5&q=denver,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.18.0 (Ubuntu)
+      Date:
+      - Mon, 07 Mar 2022 17:15:11 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - GET, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+      X-Ol-Stats:
+      - '"SR 1 0.181 TT 0 0.182"'
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "numFound": 41867,
+            "start": 0,
+            "numFoundExact": true,
+            "docs": [
+                {
+                    "title": "Denver, Co",
+                    "isbn": [
+                        "9780762507849",
+                        "0762507845"
+                    ],
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ]
+                },
+                {
+                    "title": "Photovoltaic safety, Denver, CO, 1988",
+                    "isbn": [
+                        "0883183668",
+                        "9780883183663"
+                    ],
+                    "publisher": [
+                        "American Institute of Physics"
+                    ]
+                },
+                {
+                    "title": "University of Denver Co 2007",
+                    "isbn": [
+                        "9781427401687",
+                        "1427401683"
+                    ],
+                    "publisher": [
+                        "College Prowler"
+                    ]
+                },
+                {
+                    "title": "Denver Co Deluxe Flip Map",
+                    "isbn": [
+                        "0762557362",
+                        "9780762557363"
+                    ],
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ]
+                },
+                {
+                    "title": "Insight Fleximap Denver, CO (Insight Fleximaps)",
+                    "isbn": [
+                        "9812582622",
+                        "9789812582621"
+                    ],
+                    "publisher": [
+                        "American Map Corporation"
+                    ]
+                }
+            ],
+            "num_found": 41867,
+            "q": "denver,co",
+            "offset": null
+        }
+  recorded_at: Mon, 07 Mar 2022 17:15:11 GMT
+- request:
+    method: get
+    uri: http://openlibrary.org/search.json?fields=title,publisher,isbn&limit=5&q=denver,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.18.0 (Ubuntu)
+      Date:
+      - Mon, 07 Mar 2022 17:15:11 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Method:
+      - GET, OPTIONS
+      Access-Control-Max-Age:
+      - '86400'
+      X-Ol-Stats:
+      - '"SR 1 0.193 TT 0 0.193"'
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "numFound": 41867,
+            "start": 0,
+            "numFoundExact": true,
+            "docs": [
+                {
+                    "title": "Denver, Co",
+                    "isbn": [
+                        "9780762507849",
+                        "0762507845"
+                    ],
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ]
+                },
+                {
+                    "title": "Photovoltaic safety, Denver, CO, 1988",
+                    "isbn": [
+                        "0883183668",
+                        "9780883183663"
+                    ],
+                    "publisher": [
+                        "American Institute of Physics"
+                    ]
+                },
+                {
+                    "title": "University of Denver Co 2007",
+                    "isbn": [
+                        "9781427401687",
+                        "1427401683"
+                    ],
+                    "publisher": [
+                        "College Prowler"
+                    ]
+                },
+                {
+                    "title": "Denver Co Deluxe Flip Map",
+                    "isbn": [
+                        "0762557362",
+                        "9780762557363"
+                    ],
+                    "publisher": [
+                        "Universal Map Enterprises"
+                    ]
+                },
+                {
+                    "title": "Insight Fleximap Denver, CO (Insight Fleximaps)",
+                    "isbn": [
+                        "9812582622",
+                        "9789812582621"
+                    ],
+                    "publisher": [
+                        "American Map Corporation"
+                    ]
+                }
+            ],
+            "num_found": 41867,
+            "q": "denver,co",
+            "offset": null
+        }
+  recorded_at: Mon, 07 Mar 2022 17:15:11 GMT
+recorded_with: VCR 6.0.0
