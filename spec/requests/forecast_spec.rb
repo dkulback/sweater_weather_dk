@@ -7,7 +7,7 @@ RSpec.describe 'Forecast API', type: :request do
     let(:invalid_params) { { location: '' } }
     context 'when params are valid' do
       it 'returns status code 200/json response of weather data' do
-        VCR.use_cassette('denver_forecast') do
+        VCR.use_cassette('denver_forecast_2') do
           get api_v1_forecast_path, headers: headers, params: valid_params
           forecast = JSON.parse(response.body, symbolize_names: true)
 
@@ -56,7 +56,7 @@ RSpec.describe 'Forecast API', type: :request do
 
           expect(forecast[:data][:attributes]).to have_key(:hourly_weather)
           expect(forecast[:data][:attributes][:hourly_weather]).to be_a(Array)
-          expect(forecast[:data][:attributes][:hourly_weather].count).to eq(8)
+          expect(forecast[:data][:attributes][:hourly_weather].count).to eq(48)
           expect(hourly).to have_key(:time)
           expect(hourly[:time]).to be_a(String)
           expect(hourly).to have_key(:temperature)

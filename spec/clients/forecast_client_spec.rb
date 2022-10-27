@@ -13,10 +13,10 @@ RSpec.describe ForecastClient do
 
         current = forecast[:current]
         expect(forecast[:current]).to have_key(:dt)
+        expect(forecast[:current]).to have_key(:feels_like)
         expect(forecast[:current]).to have_key(:sunrise)
         expect(forecast[:current]).to have_key(:sunset)
         expect(forecast[:current]).to have_key(:temp)
-        expect(forecast[:current]).to have_key(:feels_like)
         expect(forecast[:current]).to have_key(:uvi)
         expect(forecast[:current]).to have_key(:weather)
         expect(forecast[:current][:weather][0]).to have_key(:description)
@@ -27,7 +27,7 @@ RSpec.describe ForecastClient do
         expect(current[:sunset]).to be_a(Integer)
         expect(current[:temp]).to be_a(Float)
         expect(current[:feels_like]).to be_a(Float)
-        expect(current[:uvi]).to be_a(Integer)
+        expect(current[:uvi]).to be_a(Integer).or be_a(Float)
         expect(current[:weather][0][:description]).to be_a(String)
         expect(current[:weather][0][:icon]).to be_a(String)
 
