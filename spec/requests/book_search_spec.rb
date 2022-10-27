@@ -4,6 +4,7 @@ RSpec.describe 'book search api', type: :request do
   let(:headers) { { "Content-Type": 'application/json', "Accept": 'application/json' } }
   let(:valid_params) { { location: 'denver,co', quantity: 5 } }
   let(:invalid_params) { { location: '', quantity: -2 } }
+  let(:invalid_qty_params) { { location: 'denver,co', quantity: -2 } }
   describe 'GET /api/v1/book-search' do
     context 'when params are valid' do
       it 'returns a json response and status 200' do
@@ -53,10 +54,20 @@ RSpec.describe 'book search api', type: :request do
     context 'when params are invalid' do
       it 'returns bad request status and error message' do
         VCR.use_cassette('invalid_location') do
-          get api_v1_backgrounds_path, headers: headers, params: invalid_params
+          get api_v1_book_search_path, headers: headers, params: invalid_params
 
           expect(response).to have_http_status(400)
           expect(response.body).to match(/Location parameter is required/)
+        end
+      end
+    end
+    context 'when qty parameter is invalid' do
+      it 'returns default value of 5 books' do
+        VCR.use_cassette('invalid_quantity') do
+          get api_v1_book_search_path, headers: headers, params: invalid_qty_params
+          json = JSON.parse(response.body, symbolize_names: true)
+          books = json[:data][:attributes][:books]
+          expect(books.count).to eq(5)
         end
       end
     end
