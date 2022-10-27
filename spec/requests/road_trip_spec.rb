@@ -4,12 +4,13 @@ RSpec.describe 'API roadtrips' do
   let(:headers) { { "Content-Type": 'application/json', "Accept": 'application/json' } }
   let(:valid_body) { { origin: 'denver,co', destination: 'Pueblo,co', api_key: 'lx7HrdFFTzSDKXv64chdGwtt' } }
   let(:invalid_destination) { { origin: 'denver,co', destination: 'Germany', api_key: 'lx7HrdFFTzSDKXv64chdGwtt' } }
-  let(:invalid_body) { { origin: 'denver,co', destination: 'Pueblo,co', api_key: '12345' } }
+  let(:unauthorized) { { origin: 'denver,co', destination: 'Pueblo,co', api_key: '12345' } }
   describe 'POST api/v1/road_trip' do
     context 'when params are valid' do
       it 'returns a user json and status 200' do
         user = User.create!(email: 'user_email@gmail.com', password: '12345', password_confirmation: '12345')
         user.update!(api_key: 'lx7HrdFFTzSDKXv64chdGwtt')
+
         VCR.use_cassette('current_road_trip') do
           post api_v1_road_trip_path, headers: headers, params: JSON.generate(valid_body)
 
@@ -43,10 +44,10 @@ RSpec.describe 'API roadtrips' do
       end
     end
     context 'when api_key is invalid' do
-      it 'returns unprocessable entity, status 401, unauthorized' do
+      it 'returns status 401, unauthorized, invalid credentials' do
         user = User.create!(email: 'user_email@gmail.com', password: '12345', password_confirmation: '12345')
         user.update!(api_key: 'lx7HrdFFTzSDKXv64chdGwtt')
-        post api_v1_road_trip_path, headers: headers, params: JSON.generate(invalid_body)
+        post api_v1_road_trip_path, headers: headers, params: JSON.generate(unauthorized)
 
         expect(response).to have_http_status(401)
         expect(response.body).to match(/Invalid or missing api key/)
